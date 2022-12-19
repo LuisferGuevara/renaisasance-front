@@ -2,7 +2,7 @@ const exposicion$$ = document.querySelector('.exposicion');
 
 
 const peticion = () => {
-      fetch("http://localhost:3000/architectures")
+      fetch("https://renaissance-back.vercel.app/architectures")
       .then((res) => res.json())
       .then((architectures) => renderArchitectures(architectures));
 };

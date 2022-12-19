@@ -24,7 +24,7 @@ const añadir = async () => {
     }
   }
   console.log(datosArquitectura);
-    await fetch("http://localhost:3000/architectures/create/", {
+    await fetch("https://renaissance-back.vercel.app/architectures/create/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

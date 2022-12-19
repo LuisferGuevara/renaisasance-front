@@ -4,7 +4,7 @@ const form$$ = document.querySelector(".form--box");
 const sendButton$$ = document.querySelector(".enviar--form");
 
 const peticion = () => {
-  fetch("http://localhost:3000/architectures/getbyname/" + select$$.value)
+  fetch("https://renaissance-back.vercel.app/architectures/getbyname/" + select$$.value)
     .then((res) => res.json())
     .then((architectures) => getArchitecture(architectures));
   form$$.classList.remove("hide");
@@ -20,7 +20,7 @@ const getArchitecture = (architecture) => {
 };
 
 const getAllArchitectures = () => {
-  fetch("http://localhost:3000/architectures")
+  fetch("https://renaissance-back.vercel.app/architectures")
     .then((res) => res.json())
     .then((architectures) => fillSelect(architectures));
 };
@@ -57,7 +57,7 @@ const edit = async () => {
     location: location$$.value,
   };
   console.log(architectureInfo$$._id)
-    await fetch("http://localhost:3000/architectures/edit/" + architectureInfo$$._id, {
+    await fetch("https://renaissance-back.vercel.app/architectures/edit/" + architectureInfo$$._id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

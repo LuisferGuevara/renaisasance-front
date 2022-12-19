@@ -1,7 +1,7 @@
 const gallery$$ = document.querySelector(".gallery");
 
 const peticion = () => {
-  fetch("http://localhost:3000/gallery")
+  fetch("https://renaissance-back.vercel.app/gallery")
     .then((res) => res.json())
     .then((galleries) => renderGallery(galleries));
 };
